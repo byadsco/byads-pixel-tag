@@ -1,0 +1,15 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "ByAds Pixel GTM Template",
+  "description": "Google Tag Manager web tag template that loads the ByAds Pixel to measure page views, conversions and ad-click attribution.",
+  "excludeFolders": [".github", "assets", "scripts"],
+  "excludeFiles": ["LICENSE", "SECURITY.md", "package.json", "package-lock.json"],
+  "rules": [
+    "Install the template from the Google Tag Manager Community Template Gallery by searching for \"ByAds Pixel\", or import template.tpl from this repository. It only works in web containers.",
+    "The Client ID field is required. It identifies the advertiser in ByAds; ask the ByAds account manager for it.",
+    "Create one ByAds Pixel tag per event. The pixel script loads once per page and every later tag reuses it.",
+    "The template does not wait for consent on its own. Require consent in the tag's Advanced Settings > Consent Settings.",
+    "If the site has a Content Security Policy, allow https://pixel.byads.co in script-src, connect-src and img-src.",
+    "Do not rename template parameters or the __advBeacon, __advBeaconInbox and __advBeaconReady globals: installed tags and the pixel script depend on them."
+  ]
+}

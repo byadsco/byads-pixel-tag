@@ -1,0 +1,30 @@
+name: Validate template
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out the full history
+        # actions/checkout v7.0.1, pinned by commit SHA
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Install the pinned validator dependencies
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Validate template.tpl, metadata.yaml and LICENSE
+        env:
+          # Versions already published on main must stay listed in metadata.yaml.
+          VALIDATE_BASE_REF: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+        run: npm run validate

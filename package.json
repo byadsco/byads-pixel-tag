@@ -1,0 +1,17 @@
+{
+  "name": "byads-pixel-tag",
+  "private": true,
+  "description": "Checks for the ByAds Pixel Google Tag Manager template",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs"
+  },
+  "devDependencies": {
+    "acorn": "8.19.0",
+    "yaml": "2.9.1"
+  }
+}
