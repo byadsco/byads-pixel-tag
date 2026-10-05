@@ -1,9 +1,20 @@
 {
   "$schema": "https://context7.com/schema/context7.json",
+  "url": "https://context7.com/byadsco/byads-pixel-tag",
+  "public_key": "pk_LpTr1I5UfopgdQn99ikRA",
   "projectTitle": "ByAds Pixel GTM Template",
   "description": "Google Tag Manager web tag template that loads the ByAds Pixel to measure page views, conversions and ad-click attribution.",
-  "excludeFolders": [".github", "assets", "scripts"],
-  "excludeFiles": ["LICENSE", "SECURITY.md", "package.json", "package-lock.json"],
+  "excludeFolders": [
+    ".github",
+    "assets",
+    "scripts"
+  ],
+  "excludeFiles": [
+    "LICENSE",
+    "SECURITY.md",
+    "package.json",
+    "package-lock.json"
+  ],
   "rules": [
     "Install the template from the Google Tag Manager Community Template Gallery by searching for \"ByAds Pixel\", or import template.tpl from this repository. It only works in web containers.",
     "The Client ID field is required. It identifies the advertiser in ByAds; ask the ByAds account manager for it.",
