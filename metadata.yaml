@@ -1,0 +1,6 @@
+homepage: "https://byads.co"
+documentation: "https://github.com/byadsco/byads-pixel-tag#readme"
+versions:
+  # Latest version
+  - sha: 784db7c0dac996ea8e1dfb43908ca5a9060dc43e
+    changeNotes: Initial release.
